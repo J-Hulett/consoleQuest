@@ -17,23 +17,22 @@ public class HomeMenu {
     boolean isPlaying = false;
 
 
+    public void run() {
 
-    public void run(){
-
-        while(isStarted) {
+        while (isStarted) {
             userOut.welcomeScreen();
             userIn.continueFromWelcomeScreen(this);
         }
 
-        while (isSelecting){
-        userOut.characterRaceSelect();
-        player = userIn.userRaceSelect(this);
-        game = new GameRuntime();
-        setPlaying(true);
-        setSelecting(false);
+        while (isSelecting) {
+            userOut.characterRaceSelect();
+            player = userIn.userRaceSelect(this);
+            game = new GameRuntime();
+            setPlaying(true);
+            setSelecting(false);
         }
 
-        while(isPlaying){
+        while (isPlaying) {
             game.gameStart(player);
             isPlaying = false;
         }
