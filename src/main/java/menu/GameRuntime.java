@@ -1,47 +1,39 @@
 package menu;
 
+import World.Dungeon;
+import World.Wall;
 import characters.Character;
 
-public class GameRuntime {
+import java.io.PrintWriter;
 
-    public void gameStart(Character player){
-        System.out.println(" ______________________________");
-        System.out.println("|                              |");
-        System.out.println("|                              |");
-        System.out.println("|                              |");
-        System.out.println("|                              |");
-        System.out.println("|                              |");
-        System.out.println("|                              |");
-        System.out.println("|                              |");
-        System.out.println("|                              |");
-        System.out.println("|                              |");
-        System.out.println("|______________________________|");
-        System.out.println();
-        printArray();
+public class GameRuntime {
+    Dungeon runtimeDungeon;
+    PrintWriter printWriter = new PrintWriter(System.out, true);
+
+    public void gameStart(Character player) {
+        runtimeDungeon = new Dungeon(75,20, 50);
+        //printArray(printWriter);
+        runtimeDungeon.generateWalls();
+       // runtimeDungeon.printWalls(printWriter);
+        printArray(printWriter);
     }
 
-    public void printArray(){
-        int rows = 10;
-        int columns = 20;
+    public static void printArray(PrintWriter printWriter) {
+        int rows = 20;
+        int columns = 75;
 
         String[][] array = new String[rows][columns];
 
-        for (int i = 0; i<rows; i++)
-            for (int j = 0; j<columns; j++)
-                if(i <= 9 && i >= 1 && j == 0 || j == 19){
-                    array[i][j] = "|";
-                } else if (j <= 19 && i == 9 || i == 0){
-                    array[i][j] = "__";
-                } else if(i == 8 && j == 10){
-                    array[i][j] = "x ";
-                } else
-                    array[i][j] = "  ";
+        for (int i = 0; i < rows; i++)
+            for (int j = 0; j < columns; j++)
+                    array[i][j] = "\u25A8";
 
-        for (int i = 0; i<rows; i++) {
-            for (int j = 0; j<columns; j++) {
-                System.out.print(array[i][j]);
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                printWriter.print(array[i][j]);
             }
-            System.out.println();
+            printWriter.println();
         }
+
     }
 }
