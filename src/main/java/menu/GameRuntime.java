@@ -11,7 +11,7 @@ public class GameRuntime {
     PrintWriter printWriter = new PrintWriter(System.out, true);
 
     public void gameStart(Character player) {
-        runtimeDungeon = new Dungeon(100, 35, 600);
+        runtimeDungeon = new Dungeon(75, 25, 400);
         runtimeDungeon.generateWalls(false);
         runtimeDungeon.printWalls(printWriter);
     }
