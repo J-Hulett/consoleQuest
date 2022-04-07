@@ -11,11 +11,12 @@ public class GameRuntime {
     PrintWriter printWriter = new PrintWriter(System.out, true);
 
     public void gameStart(Character player) {
-        runtimeDungeon = new Dungeon(75,20, 50);
+        runtimeDungeon = new Dungeon(75,20, 600);
         //printArray(printWriter);
         runtimeDungeon.generateWalls();
-       // runtimeDungeon.printWalls(printWriter);
-        printArray(printWriter);
+        runtimeDungeon.printWalls(printWriter);
+        //runtimeDungeon.addWallsToMatrix(printWriter);
+        //printArray(printWriter);
     }
 
     public static void printArray(PrintWriter printWriter) {

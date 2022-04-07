@@ -1,5 +1,7 @@
 package World;
 
+import userIO.Colors;
+
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +11,8 @@ public class Dungeon {
     private int dungeonHeightY;
     private int numberOfWalls;
     private List<Wall> wallPositions = new ArrayList<>();
-
+    String[][] wallMatrix;
+    
 
     public Dungeon(int dungeonWidthX, int dungeonHeightY, int numberOfWalls){
         this.dungeonWidthX = dungeonWidthX;
@@ -20,25 +23,29 @@ public class Dungeon {
     public void generateWalls(){
         for(int i = 0; i < numberOfWalls; i++){
             Wall wall = new Wall((int) (Math.random() * (dungeonWidthX))
-                    , (int) (Math.random() * (dungeonHeightY)));
+                    , (int) (Math.random() * (dungeonHeightY )));
             wallPositions.add(wall);
+            System.out.println("X: " + wall.getxPosition() + " Y: " + wall.getyPosition());
         }
     }
 
     public void printWalls(PrintWriter printWriter){
-        String[][] wallMatrix = new String[dungeonHeightY][dungeonWidthX];
-        for(Wall wall : wallPositions){
-            for(int i = 1; i < dungeonHeightY; i ++){
-                for(int j = 1; j < dungeonWidthX; i++){
-                    if(i == wall.getyPosition() && j == wall.getxPosition()){
-                        wallMatrix[i-1][j-1] = "\u25A8";
-                    } else
-                        wallMatrix[i-1][j-1] = "\u25A2";
+        wallMatrix = new String[dungeonHeightY][dungeonWidthX];
+
+            for (int i = 0; i < dungeonHeightY; i ++) {
+                for (int j = 0; j < dungeonWidthX; j++) {
+                    for(Wall wall : wallPositions) {
+                        if (i == wall.getyPosition() && j == wall.getxPosition()) {
+                            wallMatrix[i][j] = (Colors.BACKGROUND_RED + "\u2591" + Colors.Reset);
+                            break;
+                        } else {
+                            wallMatrix[i][j] = (Colors.BACKGROUND_WHITE + "\u2593" + Colors.Reset);
+                        }
+                    }
                 }
             }
-        }
         for(int i = 0; i < dungeonHeightY; i++){
-            for(int j = 0; j < dungeonWidthX; i++){
+            for(int j = 0; j < dungeonWidthX; j++){
                 printWriter.print(wallMatrix[i][j]);
             }
             printWriter.println();

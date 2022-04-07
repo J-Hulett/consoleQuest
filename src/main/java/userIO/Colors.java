@@ -10,4 +10,8 @@ public class Colors {
     public static final Color Purple = new Color("\u001B[35m");
     public static final Color Cyan = new Color("\u001B[36m");
     public static final Color White = new Color("\u001B[37m");
+    public static final Color BLINK = new Color("\u001B[5m");
+
+    public static final Color BACKGROUND_WHITE = new Color("\u001B[47m");
+    public static final Color BACKGROUND_RED = new Color("\u001B[41m");
 }
