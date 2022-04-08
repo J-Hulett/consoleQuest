@@ -38,4 +38,10 @@ public class UserOutput {
         printBannerLine(Colors.Red);
     }
 
+    public void promptUserForMovement(){
+        printBannerLine(Colors.Purple);
+        System.out.println(Colors.Yellow + "Move: (North) - (South) - (East) - (West) ?");
+        printBannerLine(Colors.Purple);
+    }
+
 }

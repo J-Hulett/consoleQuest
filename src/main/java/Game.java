@@ -1,12 +1,12 @@
-import menu.HomeMenu;
+import gameRuntimeOperations.MainGameThread;
 
 public class Game {
 
-    HomeMenu home;
+    MainGameThread home;
 
     boolean newGame = false;
     public static void main(String[] args) {
-        HomeMenu home = new HomeMenu();
+        MainGameThread home = new MainGameThread();
         home.run();
     }
 

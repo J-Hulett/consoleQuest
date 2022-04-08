@@ -11,7 +11,7 @@ public class Dungeon {
     private int dungeonHeightY;
     private int numberOfWalls;
     private List<Wall> wallPositions = new ArrayList<>();
-    String[][] wallMatrix;
+    String[][] dungeonMatrix;
 
 
     public Dungeon(int dungeonWidthX, int dungeonHeightY, int numberOfWalls) {
@@ -30,24 +30,39 @@ public class Dungeon {
         }
     }
 
-    public void printWalls(PrintWriter printWriter) {
-        wallMatrix = new String[dungeonHeightY][dungeonWidthX];
+    public boolean checkForWalls(int userX, int userY){
+        boolean isWall = false;
+        for(Wall wall : wallPositions){
+            if(userX == wall.getxPosition() && userY == wall.getyPosition()){
+                isWall = true;
+            } else {
+                isWall = false;
+            }
+        }
+        return isWall;
+    }
+
+    public void buildAndColorDungeonMatrix() {
+        dungeonMatrix = new String[dungeonHeightY][dungeonWidthX];
 
         for (int i = 0; i < dungeonHeightY; i++) {
             for (int j = 0; j < dungeonWidthX; j++) {
                 for (Wall wall : wallPositions) {
                     if (i == wall.getyPosition() && j == wall.getxPosition()) {
-                        wallMatrix[i][j] = (Colors.BACKGROUND_RED + "\u2591" + Colors.Reset);
+                        dungeonMatrix[i][j] = (Colors.BACKGROUND_RED + "\u2591" + Colors.Reset);
                         break;
                     } else {
-                        wallMatrix[i][j] = (Colors.BACKGROUND_WHITE + "\u2593" + Colors.Reset);
+                        dungeonMatrix[i][j] = (Colors.BACKGROUND_WHITE + "\u2593" + Colors.Reset);
                     }
                 }
             }
         }
+    }
+
+    public void printDungeonMatrix(PrintWriter printWriter){
         for (int i = 0; i < dungeonHeightY; i++) {
             for (int j = 0; j < dungeonWidthX; j++) {
-                printWriter.print(wallMatrix[i][j]);
+                printWriter.print(dungeonMatrix[i][j]);
             }
             printWriter.println();
         }
@@ -84,4 +99,13 @@ public class Dungeon {
     public void setWallPositions(List<Wall> wallPositions) {
         this.wallPositions = wallPositions;
     }
+
+    public String[][] getDungeonMatrix() {
+        return dungeonMatrix;
+    }
+
+    public void setDungeonMatrix(String[][] dungeonMatrix) {
+        this.dungeonMatrix = dungeonMatrix;
+    }
+
 }

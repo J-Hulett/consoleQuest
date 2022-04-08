@@ -5,9 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="744adf6b-d0bb-4f73-8042-a10f4336a307" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gameRuntimeOperations/GameSetup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/player/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/menu/GameRuntime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/menu/GameRuntime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/menu/GameRuntime.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/menu/GameRuntime.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/World/Dungeon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/World/Dungeon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/menu/GameRuntime.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/menu/HomeMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameRuntimeOperations/MainGameThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/userIO/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userIO/UserInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/userIO/UserOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userIO/UserOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/World/Dungeon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/World/Dungeon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/menu/GameRuntime.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/menu/HomeMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/userIO/UserInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userIO/UserInput.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/userIO/UserOutput.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userIO/UserOutput.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +30,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -35,8 +49,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="JAVA" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$USER_HOME$/workspace/justin-hulett-student-code/java/module-2/04_INSERT_UPDATE_and_DELETE/exercise" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -78,11 +94,23 @@
       <workItem from="1649300524207" duration="6631000" />
       <workItem from="1649359818335" duration="855000" />
       <workItem from="1649379692065" duration="1149000" />
+      <workItem from="1649381368870" duration="11487000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -91,6 +119,11 @@
           <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="4" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/player/User.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
