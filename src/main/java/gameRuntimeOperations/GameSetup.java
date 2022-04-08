@@ -12,7 +12,7 @@ public class GameSetup {
 
 
     public User gameStart(Character player, MainGameThread mainGameThread) {
-        runtimeDungeon = new Dungeon(75, 25, 600);
+        runtimeDungeon = new Dungeon(100, 25, 750);
         runtimeDungeon.generateWalls(false);
         runtimeDungeon.buildAndColorDungeonMatrix();
         runtimeDungeon.printDungeonMatrix(printWriter);

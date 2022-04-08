@@ -6,6 +6,8 @@ import player.User;
 import userIO.UserInput;
 import userIO.UserOutput;
 
+import java.util.concurrent.TimeUnit;
+
 public class MainGameThread {
 
     UserOutput userOut = new UserOutput();
@@ -43,6 +45,11 @@ public class MainGameThread {
         while(isMoving){
             userOut.promptUserForMovement();
             userIn.userMoves(this, player, currentUser, game.getRuntimeDungeon());
+            try {
+                TimeUnit.SECONDS.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             game.repaintDungeon();
         }
 

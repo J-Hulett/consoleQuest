@@ -46,25 +46,26 @@ public class User {
 
     public void moveUser(String direction, Dungeon dungeon){
 
-        if(!dungeon.checkForWalls(userXposition, userYposition)){
+
+        if(direction.equals("North") && !dungeon.checkForWalls(userXposition, userYposition- 1)){
             wipePlayerCurrentPosition(dungeon);
-        } else {
-            System.out.println("NOPE!!!!!!!!! --- THERES A WALL THERE!!!");
-        }
-
-
-
-        if(direction.equals("North") && !dungeon.checkForWalls(userXposition, userYposition)){
             userYposition -= 1;
-        } else if (direction.equals("South") && !dungeon.checkForWalls(userXposition, userYposition)){
-            userYposition += 1;
-        }else if (direction.equals("East") && !dungeon.checkForWalls(userXposition, userYposition)){
+            addOrUpdateUserToDungeonMatrix(dungeon);
+        } else if (direction.equals("South") && !dungeon.checkForWalls(userXposition, userYposition + 1)){
+            wipePlayerCurrentPosition(dungeon);
+           userYposition += 1;
+            addOrUpdateUserToDungeonMatrix(dungeon);
+        }else if (direction.equals("East") && !dungeon.checkForWalls(userXposition + 1, userYposition)){
+            wipePlayerCurrentPosition(dungeon);
             userXposition += 1;
-        } else if (direction.equals("West") && !dungeon.checkForWalls(userXposition, userYposition)){
+            addOrUpdateUserToDungeonMatrix(dungeon);
+        } else if (direction.equals("West") && !dungeon.checkForWalls(userXposition, userYposition- 1)){
+            wipePlayerCurrentPosition(dungeon);
             userXposition -= 1;
+            addOrUpdateUserToDungeonMatrix(dungeon);
         }
 
-        addOrUpdateUserToDungeonMatrix(dungeon);
+
     }
 
     public void wipePlayerCurrentPosition(Dungeon dungeon){

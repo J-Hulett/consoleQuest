@@ -5,22 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="744adf6b-d0bb-4f73-8042-a10f4336a307" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gameRuntimeOperations/GameSetup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/player/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/World/Dungeon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/World/Dungeon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/menu/GameRuntime.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/menu/HomeMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameRuntimeOperations/MainGameThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/userIO/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userIO/UserInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/userIO/UserOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userIO/UserOutput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gameRuntimeOperations/GameSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameRuntimeOperations/GameSetup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gameRuntimeOperations/MainGameThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameRuntimeOperations/MainGameThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/player/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/player/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/World/Dungeon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/World/Dungeon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/menu/GameRuntime.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/menu/HomeMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/userIO/UserInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userIO/UserInput.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/userIO/UserOutput.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userIO/UserOutput.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gameRuntimeOperations/GameSetup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gameRuntimeOperations/GameSetup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gameRuntimeOperations/MainGameThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gameRuntimeOperations/MainGameThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/player/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/player/User.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +87,7 @@
       <workItem from="1649300524207" duration="6631000" />
       <workItem from="1649359818335" duration="855000" />
       <workItem from="1649379692065" duration="1149000" />
-      <workItem from="1649381368870" duration="11487000" />
+      <workItem from="1649381368870" duration="14942000" />
     </task>
     <servers />
   </component>
@@ -121,8 +114,8 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/player/User.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="7" />
+          <line>49</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

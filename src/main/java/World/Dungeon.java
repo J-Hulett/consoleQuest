@@ -35,6 +35,7 @@ public class Dungeon {
         for(Wall wall : wallPositions){
             if(userX == wall.getxPosition() && userY == wall.getyPosition()){
                 isWall = true;
+                break;
             } else {
                 isWall = false;
             }
