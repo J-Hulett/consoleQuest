@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="744adf6b-d0bb-4f73-8042-a10f4336a307" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/menu/GameRuntime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/menu/GameRuntime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/menu/GameRuntime.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/menu/GameRuntime.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="JAVA" />
-    <property name="last_opened_file_path" value="$USER_HOME$/workspace/justin-hulett-student-code/java/module-2/04_INSERT_UPDATE_and_DELETE/exercise" />
+    <property name="last_opened_file_path" value="$USER_HOME$/workspace/justin-hulett-student-code/java/module-2/04_INSERT_UPDATE_and_DELETE/lecture" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -77,7 +75,8 @@
       <workItem from="1649287888331" duration="711000" />
       <workItem from="1649300524207" duration="6631000" />
       <workItem from="1649359818335" duration="855000" />
-      <workItem from="1649379692065" duration="1149000" />
+      <workItem from="1649379692065" duration="1214000" />
+      <workItem from="1649423822935" duration="23000" />
     </task>
     <servers />
   </component>
