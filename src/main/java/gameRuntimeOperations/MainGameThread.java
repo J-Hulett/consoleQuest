@@ -1,18 +1,23 @@
-package menu;
+package gameRuntimeOperations;
 
+import World.Dungeon;
 import characters.Character;
+import player.User;
 import userIO.UserInput;
 import userIO.UserOutput;
 
-public class HomeMenu {
+import java.util.concurrent.TimeUnit;
+
+public class MainGameThread {
 
     UserOutput userOut = new UserOutput();
     UserInput userIn = new UserInput();
-    GameRuntime game;
+    GameSetup game;
     Character player;
+    User currentUser;
     boolean isStarted = true;
     boolean isSelecting = false;
-
+    boolean isMoving = false;
 
     boolean isPlaying = false;
 
@@ -27,15 +32,28 @@ public class HomeMenu {
         while (isSelecting) {
             userOut.characterRaceSelect();
             player = userIn.userRaceSelect(this);
-            game = new GameRuntime();
+            game = new GameSetup();
             setPlaying(true);
             setSelecting(false);
         }
 
         while (isPlaying) {
-            game.gameStart(player);
+            currentUser = game.gameStart(player, this);
             isPlaying = false;
         }
+
+        while(isMoving){
+            userOut.promptUserForMovement();
+            userIn.userMoves(this, player, currentUser, game.getRuntimeDungeon());
+            try {
+                TimeUnit.SECONDS.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            game.repaintDungeon();
+        }
+
+
     }
 
     public boolean isStarted() {

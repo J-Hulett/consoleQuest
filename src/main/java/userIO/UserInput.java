@@ -1,10 +1,11 @@
 package userIO;
 
+import World.Dungeon;
 import characters.Character;
 import characters.Warrior;
-import menu.HomeMenu;
+import gameRuntimeOperations.MainGameThread;
+import player.User;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class UserInput {
@@ -15,23 +16,23 @@ public class UserInput {
         return userSelection.trim().toUpperCase();
     }
 
-    public void continueFromWelcomeScreen(HomeMenu homeMenu) {
+    public void continueFromWelcomeScreen(MainGameThread mainGameThread) {
         String selction = getUserInput();
         switch (selction) {
             case "Y":
-                homeMenu.setSelecting(true);
-                homeMenu.setStarted(false);
+                mainGameThread.setSelecting(true);
+                mainGameThread.setStarted(false);
                 break;
             case "N":
                 System.out.println("GOODBYE!");
-                homeMenu.setStarted(false);
+                mainGameThread.setStarted(false);
                 break;
             default:
                 System.out.println("Invalid Selection - Please Select A Valid Option");
         }
     }
 
-    public Character userRaceSelect(HomeMenu homeMenu) {
+    public Character userRaceSelect(MainGameThread mainGameThread) {
         String selection = getUserInput();
         switch (selection) {
             case "1":
@@ -50,6 +51,26 @@ public class UserInput {
         }
 
         return null;
+    }
+
+    public void userMoves(MainGameThread mainGameThread, Character character, User currentUser, Dungeon dungeon){
+        String movement = getUserInput();
+        switch (movement){
+            case "NORTH":
+                currentUser.moveUser("North", dungeon);
+                break;
+            case "SOUTH":
+                currentUser.moveUser("South", dungeon);
+                break;
+            case "EAST":
+                currentUser.moveUser("East", dungeon);
+                break;
+            case "WEST":
+                currentUser.moveUser("West", dungeon);
+                break;
+            default:
+                System.out.println("Invalid Selection - Please Select A Valid Direction");
+        }
     }
 
 }
